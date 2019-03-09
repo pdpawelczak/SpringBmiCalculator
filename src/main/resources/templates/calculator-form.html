@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI Calculator</title>
+</head>
+<body>
+<form action="processForm" modelAttribute="calculator">
+    BMI Calculator
+    <br><br>
+    Height (example in meters: 1.80):
+    <input type="text" name="height" placeholder="wzrost">
+    <p class="fieldError" th:if="${#fields.hasErrors('calculator.height')}" th:errors="*{calculator.height}"> </p>
+    <br><br>
+    Weight (example in kilos: 80):
+    <input type="text" name="weight" placeholder="waga">
+    <p class="fieldError" th:if="${#fields.hasErrors('calculator.weight')}" th:errors="*{calculator.weight}"> </p>
+    <br><br>
+    <input type="submit" value="Submit"/>
+</form>
+</body>
+</html>

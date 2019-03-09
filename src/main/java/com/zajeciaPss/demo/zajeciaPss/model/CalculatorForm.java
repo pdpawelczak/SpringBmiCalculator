@@ -5,7 +5,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 public class CalculatorForm {
-
+    //komentarz
     @NotNull(message="is required")
     @Min(value = 1, message = "must be gearter than or equal to 1")
     @Max(value = 3, message = "must be less than or equal to 3")
